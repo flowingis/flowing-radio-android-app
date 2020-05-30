@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         coroutineScope.launch {
             val getContentDeferred =  PodcastRepository.list()
             val result = getContentDeferred.await()
-            Log.i("RESULT", result.response.items.size.toString())
+            Log.i("RESULT", result.size.toString())
         }
     }
 }
